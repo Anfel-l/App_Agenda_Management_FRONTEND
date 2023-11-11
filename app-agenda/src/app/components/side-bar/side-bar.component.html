@@ -1,0 +1,16 @@
+<!-- sidebar.component.html -->
+<div class="main-container">
+    <div class="sidebar-container">
+        <div class="user-name">{{ user.firstName }} {{ user.lastName }}</div>
+        <div class="details">
+          <div class="item">{{ user.documentType }}: {{ user.document }}</div>
+          <div class="item">Tipo de Contrato: {{ user.contractType }}</div>
+          <div class="item">Ubicación: {{ user.locationName }}</div>
+        </div>
+        <br/>
+      </div>
+      <button class = "request" (click)="onSolicitarCita()">Solicitar Cita Médica</button>
+      <button class = "update" (click)="onActualizarInfo()">Actualizar Información del Usuario</button>
+      <button class="logout-button" (click)="logout()">Cerrar Sesión</button>
+</div>
+

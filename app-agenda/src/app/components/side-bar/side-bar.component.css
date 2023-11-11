@@ -1,0 +1,110 @@
+.main-container{
+    width: 60%;
+    height: auto;
+    display: block;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.sidebar-container{
+    width: auto;
+    height: auto;
+    background-color: #ff0000;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.user-name{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #ffffff;
+    text-align: center;
+    margin: 2px;
+    padding: 20px;
+
+    border-radius: 10px;
+    background-color: rgb(114, 32, 32);
+}
+
+.details{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+    
+    padding: 5px;
+    color: #ffffff;
+    background-color: rgb(199, 15, 15);
+    border-radius: 10px;
+}
+
+.item{
+    margin: 20px;
+}
+
+.request{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(230, 224, 224);
+    color: rgb(71, 67, 67);
+    border: 0cm;
+
+
+    width: 100%;
+    height: auto;
+}
+
+.request:hover{
+    background-color: rgb(68, 64, 64);
+    color: #ffffff;
+}
+
+.update{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(230, 224, 224);
+    color: rgb(71, 67, 67);
+    border: 0cm;
+
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.update:hover{
+    background-color: rgb(68, 64, 64);
+    color: #ffffff;
+}
+
+.logout-button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(230, 224, 224);
+    color: rgb(71, 67, 67);
+    border: 0cm;
+
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: auto;
+
+    margin-top: 350px;
+}
+
+.logout-button:hover{
+    background-color: rgb(68, 64, 64);
+    color: #ffffff;
+}

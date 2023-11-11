@@ -1,0 +1,27 @@
+<!-- home.component.html -->
+<div class="home-container">
+    <!-- Sidebar Component -->
+    <app-sidebar (solicitarCita)="changeView('solicitarCita')"
+                 (actualizarInfo)="changeView('actualizarInfo')"></app-sidebar>
+  
+    <!-- Main Content Area -->
+    <div class="content-area">
+      <!-- View for Requesting Medical Appointment -->
+      <ng-container *ngIf="currentView === 'solicitarCita'">
+        <app-request-appointment></app-request-appointment>
+      </ng-container>
+  
+      <!-- View for Updating User Information -->
+      <ng-container *ngIf="currentView === 'actualizarInfo'">
+        <app-update-info></app-update-info>
+      </ng-container>
+  
+      <!-- Default Content -->
+      <div class="default" *ngIf="currentView === 'default'">
+        Bienvenido al sistema. <!-- Aquí puedes poner contenido predeterminado -->
+      </div>
+    </div>
+  
+
+  </div>
+  

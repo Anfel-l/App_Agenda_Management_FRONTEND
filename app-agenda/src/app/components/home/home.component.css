@@ -1,0 +1,14 @@
+/* home.component.css */
+.home-container {
+  display: flex;
+}
+
+.content-area {
+  flex-grow: 1;
+  /* más estilos según sea necesario */
+}
+
+.logout-button {
+}
+
+.default{}

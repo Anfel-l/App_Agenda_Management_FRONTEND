@@ -1,0 +1,24 @@
+<!-- login.component.html -->
+<form (ngSubmit)="onLogin()">
+    <div>
+      <label for="documentTypeId">Tipo de Documento:</label>
+      <select id="documentTypeId" [(ngModel)]="selectedDocumentTypeId" name="documentTypeId" required>
+        <option *ngFor="let type of documentTypes" [value]="type.documenTypeId">
+          {{ type.documentTypeAbbreviation }}
+        </option>
+      </select>
+    </div>
+  
+    <div>
+      <label for="document">Documento:</label>
+      <input type="text" id="document" [(ngModel)]="document" name="document" required>
+    </div>
+  
+    <div>
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" required>
+    </div>
+  
+    <button type="submit">Login</button>
+  </form>
+  
