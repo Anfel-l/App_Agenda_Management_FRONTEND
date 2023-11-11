@@ -13,6 +13,7 @@ import { LoginService } from './components/login/login.service';
 import { SidebarComponent } from './components/side-bar/side-bar.component';
 import { UpdateInfoComponent } from './components/update-info/update-info.component';
 import { RequestAppointmentComponent } from './components/request-appointment/request-appointment.component';
+import { AppointmentComponent } from './components/appointment/appointment.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { RequestAppointmentComponent } from './components/request-appointment/re
     DoctorComponent,
     UpdateInfoComponent,
     SidebarComponent,
-    RequestAppointmentComponent
+    RequestAppointmentComponent,
+    AppointmentComponent
   ],
   imports: [
     BrowserModule,

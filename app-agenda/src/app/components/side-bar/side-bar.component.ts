@@ -10,7 +10,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./side-bar.component.css']
 })
 export class SidebarComponent implements OnInit {
-  user!: User;
+  user: User = {
+    firstName: '',
+    secondName: '',
+    lastName: '',
+    document: '',
+    documentType: '',
+    contractType: '',
+    locationName: ''
+  };
   userId: number = parseInt(localStorage.getItem('userId') || '0', 10);
 
   constructor(private userService: UserService, private router:Router) {}
@@ -35,6 +43,9 @@ export class SidebarComponent implements OnInit {
 
   logout(): void {
     localStorage.removeItem('userId');
+    localStorage.removeItem('selectedSymptomId');
+    localStorage.removeItem('selectedMedicalFieldId');
+    localStorage.removeItem('selectedAppointmentTypeId');
     this.router.navigate(['/login']);
   }
 }

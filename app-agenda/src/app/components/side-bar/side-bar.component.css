@@ -1,16 +1,18 @@
 .main-container{
-    width: 60%;
-    height: auto;
+    width: 20%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
     display: block;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+
+    z-index: 3;
+    position: fixed; /* Se fija en su posición */
+    left: 0; /* Alineado a la izquierda */
+    top: 0; /* Alineado a la parte superior */
 }
 .sidebar-container{
     width: auto;
     height: auto;
     background-color: #ff0000;
-    border-radius: 10px;
     padding: 10px;
     text-align: center;
 
@@ -60,11 +62,19 @@
 
     width: 100%;
     height: auto;
+
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #535253;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    transition: ease-out 0.5s;
 }
 
 .request:hover{
-    background-color: rgb(68, 64, 64);
+
     color: #ffffff;
+
+    box-shadow: inset 400px 0 0 0 rgb(68, 64, 64);
 }
 
 .update{
@@ -80,11 +90,18 @@
     margin-right: 0px;
     width: 100%;
     height: auto;
+
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #535253;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    transition: ease-out 0.5s;
 }
 
 .update:hover{
-    background-color: rgb(68, 64, 64);
+
     color: #ffffff;
+    box-shadow: inset 400px 0 0 0 rgb(68, 64, 64);
 }
 
 .logout-button{
@@ -102,9 +119,16 @@
     height: auto;
 
     margin-top: 350px;
+
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #535253;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    transition: ease-out 0.5s;
 }
 
 .logout-button:hover{
-    background-color: rgb(68, 64, 64);
+
     color: #ffffff;
+    box-shadow: inset 400px 0 0 0 rgb(68, 64, 64);
 }

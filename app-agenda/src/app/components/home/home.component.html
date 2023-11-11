@@ -1,12 +1,12 @@
 <!-- home.component.html -->
 <div class="home-container">
-    <!-- Sidebar Component -->
+    <div class = "top-bar">
+        <p>Agendamiento de Citas</p>
+    </div>
     <app-sidebar (solicitarCita)="changeView('solicitarCita')"
                  (actualizarInfo)="changeView('actualizarInfo')"></app-sidebar>
-  
-    <!-- Main Content Area -->
-    <div class="content-area">
-      <!-- View for Requesting Medical Appointment -->
+    <div class ="content-area">
+
       <ng-container *ngIf="currentView === 'solicitarCita'">
         <app-request-appointment></app-request-appointment>
       </ng-container>

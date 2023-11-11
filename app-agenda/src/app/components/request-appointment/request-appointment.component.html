@@ -1,32 +1,33 @@
 <!-- request-appointment.component.html -->
-<form (ngSubmit)="agendarCita()">
-    <div>
-      <label for="symptom">Síntoma:</label>
-      <select id="symptom" [(ngModel)]="selectedSymptomId" name="symptom">
-        <option *ngFor="let symptom of symptoms" [value]="symptom.symptomId">
-          {{ symptom.symptomName }}
-        </option>
-      </select>
-    </div>
-  
-    <div>
-      <label for="medicalField">Especialidad:</label>
-      <select id="medicalField" [(ngModel)]="selectedMedicalFieldId" name="medicalField">
-        <option *ngFor="let field of medicalFields" [value]="field.medicalFieldId">
-          {{ field.medicalFieldName }}
-        </option>
-      </select>
-    </div>
-  
-    <div>
-      <label for="appointmentType">Tipo de Cita:</label>
-      <select id="appointmentType" [(ngModel)]="selectedAppointmentTypeId" name="appointmentType">
-        <option *ngFor="let type of appointmentTypes" [value]="type.medicalAppointmentTypeId">
-          {{ type.medicalAppointmentTypeName }}
-        </option>
-      </select>
-    </div>
-  
-    <button type="submit">Agendar Cita</button>
-  </form>
-  
+<div *ngIf="isLoading">...</div>
+
+<form *ngIf="!isLoading" (ngSubmit)="agendarCita()">
+  <div>
+    <label for="symptom">Síntoma:</label>
+    <select id="symptom" [(ngModel)]="selectedSymptomId" name="symptom">
+      <option *ngFor="let symptom of symptoms" [value]="symptom.symptomId">
+        {{ symptom.symptomName }}
+      </option>
+    </select>
+  </div>
+
+  <div>
+    <label for="medicalField">Especialidad:</label>
+    <select id="medicalField" [(ngModel)]="selectedMedicalFieldId" name="medicalField">
+      <option *ngFor="let field of medicalFields" [value]="field.medicalFieldId">
+        {{ field.medicalFieldName }}
+      </option>
+    </select>
+  </div>
+
+  <div>
+    <label for="appointmentType">Tipo de Cita:</label>
+    <select id="appointmentType" [(ngModel)]="selectedAppointmentTypeId" name="appointmentType">
+      <option *ngFor="let type of appointmentTypes" [value]="type.medicalAppointmentTypeId">
+        {{ type.medicalAppointmentTypeName }}
+      </option>
+    </select>
+  </div>
+
+  <button type="submit">Agendar Cita</button>
+</form>

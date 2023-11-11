@@ -1,6 +1,10 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+// detail.service.ts
 import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Symptom} from './models/symptom';
+import { AppointmentType } from './models/appointment-type';
+import { MedicalField } from './models/medical-field';
 
 @Injectable({ providedIn: 'root' })
 export class DetailService {
@@ -8,15 +12,15 @@ export class DetailService {
 
   constructor(private http: HttpClient) {}
 
-  getSymptoms(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/symptom/`);
+  getSymptoms(): Observable<Symptom[]> {
+    return this.http.get<Symptom[]>(`${this.apiUrl}/symptom/`);
   }
 
-  getMedicalFields(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/medical-field/`);
+  getMedicalFields(): Observable<MedicalField[]> {
+    return this.http.get<MedicalField[]>(`${this.apiUrl}/medical-field/`);
   }
 
-  getAppointmentTypes(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/appointment-type/`);
+  getAppointmentTypes(): Observable<AppointmentType[]> {
+    return this.http.get<AppointmentType[]>(`${this.apiUrl}/appointment-type/`);
   }
 }
