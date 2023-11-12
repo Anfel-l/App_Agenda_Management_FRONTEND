@@ -1,5 +1,5 @@
 // doctor-sidebar.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class DoctorSidebarComponent implements OnInit {
   doctorInfo: any;
+  @Output() changeView = new EventEmitter<string>();
 
   constructor(private router:Router) {}
 
@@ -16,8 +17,9 @@ export class DoctorSidebarComponent implements OnInit {
     this.doctorInfo = JSON.parse(localStorage.getItem('doctorInfo') || '{}');
   }
 
-  onReviewShift() {
 
+  onReviewShift() {
+    this.changeView.emit('reviewShift');
   }
 
   logout(): void {

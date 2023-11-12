@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-side-bar',
@@ -7,4 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AdminSideBarComponent {
 
+  constructor(private router:Router) {}
+
+  ngOnInit() {
+  }
+
+  onUploadMassive() {
+
+  }
+
+  onReviewAgenda(){
+
+  }
+
+  logout(): void {
+    localStorage.removeItem('doctorInfo');
+    this.router.navigate(['/']);
+  }
 }

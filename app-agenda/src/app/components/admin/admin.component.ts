@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
+  currentView: string = 'default';
+  ngOnInit() {
 
+  }
+
+  changeView(newView: string): void {
+    this.currentView = newView;
+   
+  }
 }

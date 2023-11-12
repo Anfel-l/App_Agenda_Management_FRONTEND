@@ -1,1 +1,16 @@
-<p>admin works!</p>
+<!-- home.component.html -->
+<div class="home-container">
+    <div class = "top-bar">
+        <p>Administración del sistema</p>
+    </div>
+    <app-admin-side-bar (solicitarCita)="changeView('solicitarCita')"
+                 (actualizarInfo)="changeView('actualizarInfo')"></app-admin-side-bar>
+    <div class ="content-area">
+  
+      <div class="default" *ngIf="currentView === 'default'">
+        Bienvenido al sistema. 
+      </div>
+    </div>
+  
+
+  </div>

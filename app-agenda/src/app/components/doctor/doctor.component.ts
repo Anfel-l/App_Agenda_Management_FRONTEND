@@ -1,3 +1,4 @@
+// doctor.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,19 +8,8 @@ import { Component } from '@angular/core';
 })
 export class DoctorComponent {
   currentView: string = 'default';
-  ngOnInit() {
-
-  }
 
   changeView(newView: string): void {
     this.currentView = newView;
-   
   }
-
 }
-
-
-
-
-
-

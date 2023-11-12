@@ -1,16 +1,17 @@
-<!-- home.component.html -->
+<!-- doctor.component.html -->
 <div class="home-container">
-    <div class = "top-bar">
-        <p>Agenda de Médico</p>
-    </div>
-    <app-doctor-side-bar (solicitarCita)="changeView('solicitarCita')"
-                 (actualizarInfo)="changeView('actualizarInfo')"></app-doctor-side-bar>
-    <div class ="content-area">
-  
-      <div class="default" *ngIf="currentView === 'default'">
-        Bienvenido al sistema. 
-      </div>
-    </div>
-  
-
+  <div class="top-bar">
+      <p>Agenda de Médico</p>
   </div>
+  <app-doctor-side-bar (changeView)="changeView($event)"></app-doctor-side-bar>
+  <div class="content-area">
+    <ng-container *ngIf="currentView === 'default'">
+      <div class="default">
+        Bienvenido al sistema.
+      </div>
+    </ng-container>
+    <ng-container *ngIf="currentView === 'reviewShift'">
+      <app-doctor-shift></app-doctor-shift>
+    </ng-container>
+  </div>
+</div>
