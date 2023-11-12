@@ -1,0 +1,73 @@
+.top-bar {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(255, 228, 228);
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; 
+    background-color: #ff2020; 
+    border-bottom: #ff8888 10px solid;
+    box-sizing: border-box;
+}
+
+.content-area {
+    padding-top: 70px; 
+    overflow: auto; 
+}
+
+.bottom-bar {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: rgb(255, 228, 228);
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px; 
+    background-color: #790909; 
+    box-sizing: border-box;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+button {
+    margin: 10px; 
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(230, 224, 224);
+    color: rgb(71, 67, 67);
+    border: 0cm;
+
+    border-radius: 90px;
+
+    width: 20vw;
+    height: 20vh;
+
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #535253;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+    transition: ease-out 0.3s;
+
+    border: #f81111;
+}
+
+button:hover {
+    color: #ffffff ;
+    box-shadow: inset 600px 0 0 0 rgb(202, 19, 19);
+}

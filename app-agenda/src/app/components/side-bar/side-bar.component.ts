@@ -46,6 +46,6 @@ export class SidebarComponent implements OnInit {
     localStorage.removeItem('selectedSymptomId');
     localStorage.removeItem('selectedMedicalFieldId');
     localStorage.removeItem('selectedAppointmentTypeId');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
 }

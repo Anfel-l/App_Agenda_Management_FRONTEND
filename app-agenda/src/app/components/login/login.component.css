@@ -66,7 +66,7 @@ input[type="text"] {
 
     font-weight: lighter;
     font-size: 15px;
-    color: rgb(105, 34, 34);
+    color: rgb(255, 223, 223);
     border: 0px;
     border-radius: 20px;
 
@@ -79,7 +79,7 @@ input[type="password"] {
 
     font-weight: lighter;
     font-size: 15px;
-    color: (105, 34, 34);
+    color: rgb(255, 223, 223);
     border: 0px;
     border-radius: 20px;
 
