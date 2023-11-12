@@ -9,16 +9,16 @@
 
       <ng-container *ngIf="currentView === 'solicitarCita'">
         <app-request-appointment></app-request-appointment>
+        <app-appointment *ngIf="appointmentDetailResponse" [detail]="appointmentDetailResponse"></app-appointment>
+
       </ng-container>
   
-      <!-- View for Updating User Information -->
       <ng-container *ngIf="currentView === 'actualizarInfo'">
         <app-update-info></app-update-info>
       </ng-container>
   
-      <!-- Default Content -->
       <div class="default" *ngIf="currentView === 'default'">
-        Bienvenido al sistema. <!-- Aquí puedes poner contenido predeterminado -->
+        Bienvenido al sistema. 
       </div>
     </div>
   

@@ -2,7 +2,7 @@
 .home-container {
   display: flex;
   height: 100vh;
-  background-color: rgb(214, 214, 214);
+
 }
 .top-bar {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -19,12 +19,10 @@
     height: 70px; 
     background-color: #ff2020; 
     z-index: 1; 
+
+    padding-left: 20%;
+    box-sizing: border-box;
     
-}
-.top-bar::p{
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: baseline; 
 }
 
 .sidebar-container {

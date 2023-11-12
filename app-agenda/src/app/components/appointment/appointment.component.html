@@ -1,1 +1,9 @@
-<p>appointment works!</p>
+<!-- appointment.component.html -->
+<div *ngIf="detail">
+    <h3>Detalle de la Cita</h3>
+    <p>Doctor: {{ detail.doctorName }}</p>
+    <p>Valor: {{ detail.feeValue | currency }}</p>
+    <p>Estado: {{ detail.status }}</p>
+    <p>Fecha y hora: {{ detail.appointmentTime | date:'full' }}</p>
+    <p>Centro Médico: {{ detail.medicalCenterName }}</p>
+  </div>
