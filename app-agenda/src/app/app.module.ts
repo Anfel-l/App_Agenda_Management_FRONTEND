@@ -14,6 +14,13 @@ import { SidebarComponent } from './components/side-bar/side-bar.component';
 import { UpdateInfoComponent } from './components/update-info/update-info.component';
 import { RequestAppointmentComponent } from './components/request-appointment/request-appointment.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
+import { AdminAgendaComponent } from './components/admin-agenda/admin-agenda.component';
+import { AdminMassiveComponent } from './components/admin-massive/admin-massive.component';
+import { AdminSideBarComponent } from './components/admin-side-bar/admin-side-bar.component';
+import { DoctorLoginComponent } from './components/doctor-login/doctor-login.component';
+import { DoctorShiftComponent } from './components/doctor-shift/doctor-shift.component';
+import { DoctorSidebarComponent } from './components/doctor-side-bar/doctor-side-bar.component';
+import { MainComponent } from './components/main/main.component';
 
 
 @NgModule({
@@ -26,7 +33,15 @@ import { AppointmentComponent } from './components/appointment/appointment.compo
     UpdateInfoComponent,
     SidebarComponent,
     RequestAppointmentComponent,
-    AppointmentComponent
+    AppointmentComponent,
+    AdminAgendaComponent,
+    AdminMassiveComponent,
+    AdminSideBarComponent,
+    DoctorLoginComponent,
+    DoctorShiftComponent,
+    DoctorSidebarComponent,
+    MainComponent
+
   ],
   imports: [
     BrowserModule,

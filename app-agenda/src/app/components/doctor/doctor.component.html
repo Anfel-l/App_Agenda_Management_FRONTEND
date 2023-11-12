@@ -1,1 +1,16 @@
-<p>doctor works!</p>
+<!-- home.component.html -->
+<div class="home-container">
+    <div class = "top-bar">
+        <p>Agenda de Médico</p>
+    </div>
+    <app-doctor-side-bar (solicitarCita)="changeView('solicitarCita')"
+                 (actualizarInfo)="changeView('actualizarInfo')"></app-doctor-side-bar>
+    <div class ="content-area">
+  
+      <div class="default" *ngIf="currentView === 'default'">
+        Bienvenido al sistema. 
+      </div>
+    </div>
+  
+
+  </div>

@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./doctor.component.css']
 })
 export class DoctorComponent {
+  currentView: string = 'default';
+  ngOnInit() {
+
+  }
+
+  changeView(newView: string): void {
+    this.currentView = newView;
+   
+  }
 
 }
+
+
+
+
+
+

@@ -1,10 +1,27 @@
-import { Component } from '@angular/core';
+// doctor-sidebar.component.ts
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-doctor-side-bar',
   templateUrl: './doctor-side-bar.component.html',
   styleUrls: ['./doctor-side-bar.component.css']
 })
-export class DoctorSideBarComponent {
+export class DoctorSidebarComponent implements OnInit {
+  doctorInfo: any;
 
+  constructor(private router:Router) {}
+
+  ngOnInit() {
+    this.doctorInfo = JSON.parse(localStorage.getItem('doctorInfo') || '{}');
+  }
+
+  onReviewShift() {
+
+  }
+
+  logout(): void {
+    localStorage.removeItem('doctorInfo');
+    this.router.navigate(['/']);
+  }
 }
