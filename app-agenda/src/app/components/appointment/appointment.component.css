@@ -1,0 +1,42 @@
+.appointment{
+    margin-left: 20px;
+    margin-bottom: 50px;
+    width: 92%;
+
+    background-color: rgb(177, 20, 20);
+    padding: 10px;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.appointment::before{
+    transition: .5s;
+    transform: scale(.15);
+    z-index: -1;
+}
+
+.appointment:hover::before{
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #646464;
+}
+
+.appointment:hover{
+    box-shadow: 0 0 25px #646464;
+    text-shadow: 0 0 25px #646464;
+}
+
+.appointment h3{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.appointment p{
+
+    color: white;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

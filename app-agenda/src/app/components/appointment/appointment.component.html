@@ -1,5 +1,6 @@
 <!-- appointment.component.html -->
-<div *ngIf="detail">
+
+<div class="appointment" *ngIf="detail">
     <h3>Detalle de la Cita</h3>
     <p>Doctor: {{ detail.doctorName }}</p>
     <p>Valor: {{ detail.feeValue | currency }}</p>

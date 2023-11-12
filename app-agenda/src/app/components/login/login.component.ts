@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { LoginService } from './login.service';
 import { DocumentTypeService } from './document-type.service';
 import { DocumentTypeDTO } from './models/document-type.dto';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
           // Manejo de error de inicio de sesión
         }
       }, error => {
-        console.error(error);
+        Swal.fire('Error','Dator incorrectos', 'question');
       });
   }
 }

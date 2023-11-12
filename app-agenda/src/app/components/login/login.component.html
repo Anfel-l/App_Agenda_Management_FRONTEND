@@ -1,24 +1,51 @@
-<!-- login.component.html -->
-<form (ngSubmit)="onLogin()">
-    <div>
-      <label for="documentTypeId">Tipo de Documento:</label>
-      <select id="documentTypeId" [(ngModel)]="selectedDocumentTypeId" name="documentTypeId" required>
-        <option *ngFor="let type of documentTypes" [value]="type.documenTypeId">
+<div class="top-bar">
+  <p>Agendamiento de Citas</p>
+</div>
+
+<div class="content-area">
+  <form class="form-container" (ngSubmit)="onLogin()">
+    <div class="form-title">Iniciar Sesión</div>
+    <div class="form-item">
+      <label class="form-label" for="documentTypeId">Tipo de Documento:</label>
+      <select
+        class="form-select"
+        id="documentTypeId"
+        [(ngModel)]="selectedDocumentTypeId"
+        name="documentTypeId"
+        required
+      >
+        <option
+          class="form-option"
+          *ngFor="let type of documentTypes"
+          [value]="type.documenTypeId"
+        >
           {{ type.documentTypeAbbreviation }}
         </option>
       </select>
     </div>
-  
-    <div>
-      <label for="document">Documento:</label>
-      <input type="text" id="document" [(ngModel)]="document" name="document" required>
+
+    <div class="form-item">
+      <label class="form-label" for="document">Documento:</label>
+      <input
+        type="text"
+        id="document"
+        [(ngModel)]="document"
+        name="document"
+        required
+      />
     </div>
-  
-    <div>
-      <label for="password">Contraseña:</label>
-      <input type="password" id="password" [(ngModel)]="password" name="password" required>
+
+    <div class="form-item">
+      <label class="form-label" for="password">Contraseña:</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
     </div>
-  
-    <button type="submit">Login</button>
+
+    <button class="form-button" type="submit">Login</button>
   </form>
-  
+</div>

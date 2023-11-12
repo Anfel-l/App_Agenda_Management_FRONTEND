@@ -25,13 +25,38 @@
     
 }
 
+/* home.component.css */
+.detail-content {
+
+    width: 100%; 
+    margin-top: 20px; 
+
+
+    background-color: rgb(245, 245, 245);
+    padding: 10px;
+
+
+    border-radius: 10px;
+  }
+  
+    .detail-title{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+        color: #535253;
+        
+    }
+
 .sidebar-container {
-    width: 20%; /* Establecer un ancho fijo para el sidebar */
+    width: 20%; 
     z-index: 2; 
 }
 .content-area {
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
+    justify-content: center;
     align-items: baseline; 
     margin-top: 80px; 
     margin-left: 20%; 

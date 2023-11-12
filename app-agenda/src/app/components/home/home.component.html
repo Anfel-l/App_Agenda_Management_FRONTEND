@@ -9,7 +9,14 @@
 
       <ng-container *ngIf="currentView === 'solicitarCita'">
         <app-request-appointment></app-request-appointment>
-        <app-appointment *ngIf="appointmentDetailResponse" [detail]="appointmentDetailResponse"></app-appointment>
+        
+        <div class="detail-content">
+          <div class="detail-title">
+            Cita Agendada
+          </div>
+          <app-appointment *ngIf="appointmentDetailResponse" [detail]="appointmentDetailResponse"></app-appointment>
+        </div>
+        
 
       </ng-container>
   

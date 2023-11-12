@@ -1,0 +1,152 @@
+.form-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vh;
+    height: 50vh;
+    
+
+    background-color: rgb(255, 234, 234);
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    border-radius: 10px;
+}
+
+.form-title{
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    color: #000000;
+    
+}
+.form-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    color: rgb(114, 57, 57);
+}
+
+.form-select{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 30px;
+
+    font-weight: lighter;
+    font-size: 15px;
+    color: rgb(105, 2, 2);
+    border: 0px;
+    border-radius: 20px;
+
+    border-bottom: #f81111 2px solid;
+}
+
+.form-option{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+
+    color: rgb(141, 141, 141);
+}
+
+input[type="text"] {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 30px;
+
+    font-weight: lighter;
+    font-size: 15px;
+    color: rgb(255, 223, 223);
+    border: 0px;
+    border-radius: 20px;
+
+    border-bottom: #f81111 2px solid;
+}
+
+input[type="password"] {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 30px;
+
+    font-weight: lighter;
+    font-size: 15px;
+    color: rgb(255, 223, 223);
+    border: 0px;
+    border-radius: 20px;
+
+    border-bottom: #f81111 2px solid;
+} 
+
+.form-button{
+    
+    display: block;
+    justify-content: end;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+
+    margin-bottom: 10px;
+ 
+    border-radius: 20px;
+
+    width: 70%;
+    height: 40px;
+
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #535253;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+    transition: ease-out 0.3s;
+
+    border: #f81111;
+}
+
+.form-button:hover{
+    color: #ffffff ;
+    box-shadow: inset 600px 0 0 0 rgb(202, 19, 19);
+    
+}
+
+
+.top-bar {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: rgb(255, 228, 228);
+
+    font-weight: bold;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; 
+    background-color: #ff2020; 
+    z-index: 1; 
+
+    border-bottom: #ff8888 10px solid;
+    box-sizing: border-box;
+    
+}
+
+.content-area {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: baseline; 
+    margin-top: 80px; 
+
+    width: 100%;; 
+    position: relative; 
+    z-index: 1; 
+
+}
