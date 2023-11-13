@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app.routing.module';
+import { FullCalendarModule } from '@fullcalendar/angular'; // importar el módulo
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -47,7 +49,8 @@ import { MainComponent } from './components/main/main.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FullCalendarModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

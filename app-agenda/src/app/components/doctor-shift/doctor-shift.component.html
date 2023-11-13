@@ -1,1 +1,19 @@
-<p>doctor-shift works!</p>
+<!-- doctor-shift.component.html -->
+<div class="doctor-shift-container">
+  <div class="calendar-container">
+    <full-calendar [options]="calendarOptions"></full-calendar>
+    <button class="refresh-button" (click)="refresh()">Refrescar Turnos</button>
+  </div>
+  <div class="details-container">
+    <div class="details-title">
+      <h3>Detalles del turno</h3>
+    </div>
+
+    <div class="details" *ngIf="selectedEvent">
+      <p>Paciente: {{ selectedEvent.userName }}</p>
+      <p>Fecha y Hora: {{ selectedEvent.start | date: 'medium' }}</p>
+      <p>Síntoma: {{ selectedEvent.symptomName }}</p>
+      <p>Valor: ${{ selectedEvent.feeValue }} COP</p>
+    </div>
+  </div>
+</div>

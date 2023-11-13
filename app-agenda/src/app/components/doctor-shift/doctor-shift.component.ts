@@ -1,7 +1,9 @@
-// doctor-shift.component.ts
 import { Component, OnInit } from '@angular/core';
-import { AppointmentService } from './appointment.service'; // Asume que tienes este servicio
+import { AppointmentService } from './appointment.service';
 import { AgendaDetails } from './models/agendaDetails';
+import { CalendarOptions, EventInput } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
 
 @Component({
   selector: 'app-doctor-shift',
@@ -9,40 +11,56 @@ import { AgendaDetails } from './models/agendaDetails';
   styleUrls: ['./doctor-shift.component.css']
 })
 export class DoctorShiftComponent implements OnInit {
-  agendaDetails: AgendaDetails[] = [];
-  events: any[] = []; // Para el calendario
-  selectedEvent: any; // Evento seleccionado en el calendario
+  calendarOptions?: CalendarOptions;
+  selectedEvent: any;
 
   constructor(private appointmentService: AppointmentService) {}
 
   ngOnInit() {
-    const doctorId = JSON.parse(localStorage.getItem('doctorInfo') || '{}').doctorId;
+    const doctorId = parseInt(localStorage.getItem('doctorId') || '0');
+    const doctorInfo = JSON.parse(localStorage.getItem('doctorInfo') || '{}');
+    this.loadShifts(doctorId);
+
+    this.calendarOptions = {
+      initialView: 'timeGridDay', 
+      plugins: [dayGridPlugin, timeGridPlugin],
+      locale: 'es',
+      nowIndicator: true,
+      events: [],
+      eventClick: this.handleEventClick.bind(this),
+      initialDate: doctorInfo.startTime || new Date().toISOString()
+    };
+  }
+
+  loadShifts(doctorId: number) {
     this.appointmentService.getAgendaDetails(doctorId).subscribe(
       data => {
-        this.agendaDetails = data;
-        this.events = this.mapToCalendarEvents(data);
+        console.log(data);
+        this.calendarOptions!.events = this.mapToCalendarEvents(data);
       },
       error => console.error(error)
     );
   }
 
-  mapToCalendarEvents(agendaDetails: AgendaDetails[]): any[] {
-    return agendaDetails.map(detail => {
-      return {
-        title: detail.userName,
-        start: new Date(detail.appointmentTime),
-        end: new Date(new Date(detail.appointmentTime).getTime() + 30 * 60000), 
-        meta: detail 
-      };
-    });
+  mapToCalendarEvents(agendaDetails: AgendaDetails[]): EventInput[] {
+    return agendaDetails.map(detail => ({
+      title: `Cita con ${detail.userName}`,
+      start: new Date(detail.appointmentTime),
+      end: new Date(new Date(detail.appointmentTime).getTime() + 30 * 60000),
+      color: 'red',
+      extendedProps: detail
+    }));
   }
 
-  onEventSelect(event: any): void {
-    this.selectedEvent = event;
+  handleEventClick(clickInfo: any) {
+    this.selectedEvent = {
+      ...clickInfo.event.extendedProps,
+      start: clickInfo.event.start
+    };
   }
 
-  refreshCalendar(): void {
-    // Vuelve a cargar los detalles del turno
-    this.ngOnInit();
+  refresh() {
+    const doctorId = parseInt(localStorage.getItem('doctorId') || '0');
+    this.loadShifts(doctorId);
   }
 }

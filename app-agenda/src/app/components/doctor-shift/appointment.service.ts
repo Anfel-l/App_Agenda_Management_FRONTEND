@@ -8,11 +8,11 @@ import { AgendaDetails } from './models/agendaDetails';
   providedIn: 'root'
 })
 export class AppointmentService {
-  private apiUrl = 'http://localhost:8080/v1/api';
+  private apiUrl = 'http://localhost:8080/v1/api/detail';
 
   constructor(private http: HttpClient) {}
 
   getAgendaDetails(doctorId: number): Observable<AgendaDetails[]> {
-    return this.http.get<AgendaDetails[]>(`${this.apiUrl}/detail/agenda-detail/${doctorId}`);
+    return this.http.get<AgendaDetails[]>(`${this.apiUrl}/agenda-detail/${doctorId}`);
   }
 }

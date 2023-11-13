@@ -37,7 +37,6 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('userId', response.userId.toString());
           this.router.navigate(['/home']);
         } else {
-          // Manejo de error de inicio de sesión
         }
       }, error => {
         Swal.fire('Error','Dator incorrectos', 'question');
