@@ -1,0 +1,29 @@
+/* admin-massive.component.css */
+.admin-massive-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta según sea necesario */
+  }
+  
+  .download-button, .upload-button {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 15px;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .upload-button {
+    background-color: #008CBA;
+  }
+  
+  .upload-button:hover, .download-button:hover {
+    background-color: #007B8A;
+  }
+  

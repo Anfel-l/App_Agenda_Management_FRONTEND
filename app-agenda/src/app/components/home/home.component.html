@@ -1,34 +1,28 @@
 <!-- home.component.html -->
 <div class="home-container">
-    <div class = "top-bar">
-        <p>Agendamiento de Citas</p>
-    </div>
-    <app-sidebar (solicitarCita)="changeView('solicitarCita')"
-                 (actualizarInfo)="changeView('actualizarInfo')"></app-sidebar>
-    <div class ="content-area">
-
-      <ng-container *ngIf="currentView === 'solicitarCita'">
-        <app-request-appointment></app-request-appointment>
-        
-        <div class="detail-content">
-          <div class="detail-title">
-            Cita Agendada
-          </div>
-          <app-appointment *ngIf="appointmentDetailResponse" [detail]="appointmentDetailResponse"></app-appointment>
-        </div>
-        
-
-      </ng-container>
-  
-      <ng-container *ngIf="currentView === 'actualizarInfo'">
-        <app-update-info></app-update-info>
-      </ng-container>
-  
-      <div class="default" *ngIf="currentView === 'default'">
-        Bienvenido al sistema. 
-      </div>
-    </div>
-  
-
+  <div class="top-bar">
+    <p>Agendamiento de Citas</p>
   </div>
-  
+  <app-sidebar (solicitarCita)="changeView('solicitarCita')"></app-sidebar>
+  <div class="content-area">
+    <ng-container *ngIf="currentView === 'solicitarCita'">
+      <app-request-appointment></app-request-appointment>
+
+      <div class="detail-content">
+        <div class="detail-title">Cita Agendada</div>
+        <app-appointment
+          *ngIf="appointmentDetailResponse"
+          [detail]="appointmentDetailResponse"
+        ></app-appointment>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="currentView === 'actualizarInfo'">
+      <app-update-info></app-update-info>
+    </ng-container>
+
+    <div class="default" *ngIf="currentView === 'default'">
+      Bienvenido al sistema.
+    </div>
+  </div>
+</div>

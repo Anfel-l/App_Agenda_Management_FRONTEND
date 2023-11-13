@@ -20,12 +20,10 @@
       background-color: #ff2020; 
       z-index: 1; 
   
-      padding-left: 20%;
+      padding-left: 28%;
       box-sizing: border-box;
-      
   }
   
-  /* home.component.css */
   .detail-content {
   
       width: 100%; 

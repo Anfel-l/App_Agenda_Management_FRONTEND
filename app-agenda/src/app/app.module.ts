@@ -23,6 +23,7 @@ import { DoctorLoginComponent } from './components/doctor-login/doctor-login.com
 import { DoctorShiftComponent } from './components/doctor-shift/doctor-shift.component';
 import { DoctorSidebarComponent } from './components/doctor-side-bar/doctor-side-bar.component';
 import { MainComponent } from './components/main/main.component';
+import { AdminReviewShiftsComponent } from './components/admin-review-shifts/admin-review-shifts.component';
 
 
 @NgModule({
@@ -42,7 +43,9 @@ import { MainComponent } from './components/main/main.component';
     DoctorLoginComponent,
     DoctorShiftComponent,
     DoctorSidebarComponent,
-    MainComponent
+    MainComponent,
+    AdminReviewShiftsComponent,
+
 
   ],
   imports: [

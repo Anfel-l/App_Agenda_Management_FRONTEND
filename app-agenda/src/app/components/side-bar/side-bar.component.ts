@@ -3,6 +3,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { UserService } from './user.service';
 import { User } from './models/user';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-sidebar',
@@ -31,14 +32,8 @@ export class SidebarComponent implements OnInit {
   }
 
   @Output() solicitarCita = new EventEmitter<void>();
-  @Output() actualizarInfo = new EventEmitter<void>();
-
   onSolicitarCita() {
     this.solicitarCita.emit();
-  }
-
-  onActualizarInfo() {
-    this.actualizarInfo.emit();
   }
 
   logout(): void {
@@ -46,6 +41,7 @@ export class SidebarComponent implements OnInit {
     localStorage.removeItem('selectedSymptomId');
     localStorage.removeItem('selectedMedicalFieldId');
     localStorage.removeItem('selectedAppointmentTypeId');
+    Swal.fire('Sesión cerrada', 'Hasta pronto', 'success');
     this.router.navigate(['/']);
   }
 }

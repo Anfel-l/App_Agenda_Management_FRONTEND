@@ -1,16 +1,24 @@
-<!-- home.component.html -->
 <div class="home-container">
-    <div class = "top-bar">
-        <p>Administración del sistema</p>
-    </div>
-    <app-admin-side-bar (solicitarCita)="changeView('solicitarCita')"
-                 (actualizarInfo)="changeView('actualizarInfo')"></app-admin-side-bar>
-    <div class ="content-area">
-  
-      <div class="default" *ngIf="currentView === 'default'">
-        Bienvenido al sistema. 
-      </div>
-    </div>
-  
-
+  <div class="top-bar">
+    <p>Administración del sistema</p>
   </div>
+  <app-admin-side-bar 
+    (reviewAgenda)="changeView('reviewAgenda')"
+    (uploadMassive)="changeView('uploadMassive')"
+    (reviewShifts)="changeView('reviewShifts')"
+  ></app-admin-side-bar>
+  <div class="content-area">
+    <ng-container *ngIf="currentView === 'default'">
+      <p>Bienvenido al sistema.</p>
+    </ng-container>
+    <ng-container *ngIf="currentView === 'reviewAgenda'">
+      <app-admin-agenda></app-admin-agenda>
+    </ng-container>
+    <ng-container *ngIf="currentView === 'uploadMassive'">
+      <app-admin-massive></app-admin-massive>
+    </ng-container>
+    <ng-container *ngIf="currentView === 'reviewShifts'">
+      <app-admin-review-shifts></app-admin-review-shifts>
+    </ng-container>
+  </div>
+</div>

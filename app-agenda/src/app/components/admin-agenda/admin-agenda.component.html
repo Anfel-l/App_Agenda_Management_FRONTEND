@@ -1,1 +1,13 @@
-<p>admin-agenda works!</p>
+
+<div class="admin-agenda-container">
+    <div class="form-container">
+      <label for="doctorId">ID del Doctor:</label>
+      <input type="number" id="doctorId" [(ngModel)]="doctorId">
+      <button (click)="loadShifts()">Cargar Turnos</button>
+    </div>
+    <div class="calendar-container">
+      <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
+    <button class="download-button" (click)="downloadCSV()">Descargar Reporte</button>
+  </div>
+  
