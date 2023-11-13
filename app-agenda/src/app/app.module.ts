@@ -15,7 +15,6 @@ import { AdminComponent } from './components/admin/admin.component';
 import { DoctorComponent } from './components/doctor/doctor.component';
 import { LoginService } from './components/login/login.service';
 import { SidebarComponent } from './components/side-bar/side-bar.component';
-import { UpdateInfoComponent } from './components/update-info/update-info.component';
 import { RequestAppointmentComponent } from './components/request-appointment/request-appointment.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
 import { AdminAgendaComponent } from './components/admin-agenda/admin-agenda.component';
@@ -29,12 +28,11 @@ import { AdminReviewShiftsComponent } from './components/admin-review-shifts/adm
 
 @NgModule({
   declarations: [
-    AppComponent,
     LoginComponent,
     HomeComponent,
     AdminComponent,
     DoctorComponent,
-    UpdateInfoComponent,
+    AppComponent,
     SidebarComponent,
     RequestAppointmentComponent,
     AppointmentComponent,
@@ -45,9 +43,8 @@ import { AdminReviewShiftsComponent } from './components/admin-review-shifts/adm
     DoctorShiftComponent,
     DoctorSidebarComponent,
     MainComponent,
-    AdminReviewShiftsComponent,
-
-
+    AdminReviewShiftsComponent
+    
   ],
   imports: [
     BrowserModule,
