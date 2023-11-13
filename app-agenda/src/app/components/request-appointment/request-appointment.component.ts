@@ -116,6 +116,7 @@ export class RequestAppointmentComponent implements OnInit {
         this.appointmentScheduled.emit();
       
         Swal.fire('¡Cita agendada!', 'Tu cita ha sido agendada con éxito.', 'success');
+        localStorage.removeItem('userId')
 
       }, error => {
         console.error('Error en la solicitud:', error);

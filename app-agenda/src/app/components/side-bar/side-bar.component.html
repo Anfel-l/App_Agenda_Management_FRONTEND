@@ -1,15 +1,32 @@
 <!-- sidebar.component.html -->
 <div class="main-container">
-    <div class="sidebar-container">
-        <div class="user-name"><i class="pi pi-user" style="font-size: 2.5rem"></i><br><br>{{ user.firstName }} {{ user.lastName }} </div>
-        <div class="details">
-          <div class="item">{{ user.documentType }}: {{ user.document }}</div>
-          <div class="item">Tipo de Contrato: {{ user.contractType }}</div>
-          <div class="item">Ubicación: {{ user.locationName }}</div>
-        </div>
-        <br/>
+  <div class="sidebar-container">
+    <div class="user-name">
+      <i class="pi pi-user" style="font-size: 2.5rem"></i><br /><br />
+      <i class="pi pi-spin pi-star" style="font-size: 1rem"></i>
+      {{ user.firstName }} {{ user.lastName }}
+      <i class="pi pi-spin pi-star" style="font-size: 1rem"></i>
+    </div>
+    <div class="details">
+      <div class="item">
+        {{ user.documentType }}
+        <i class="pi pi-id-card" style="font-size: 0.8rem"></i> :
+        {{ user.document }}
       </div>
-      <button class = "request" (click)="onSolicitarCita()">Solicitar Cita Médica</button>
-      <button class="logout-button" (click)="logout()">Cerrar Sesión</button>
+      <div class="item">
+        Tipo de Contrato
+        <i class="pi pi-briefcase" style="font-size: 0.8rem"></i> :
+        {{ user.contractType }}
+      </div>
+      <div class="item">
+        Ubicación <i class="pi pi-map-marker" style="font-size: 0.8rem"></i> :
+        {{ user.locationName }}
+      </div>
+    </div>
+    <br />
+  </div>
+  <button class="request" (click)="onSolicitarCita()">
+    Solicitar Cita Médica
+  </button>
+  <button class="logout-button" (click)="logout()">Cerrar Sesión</button>
 </div>
-

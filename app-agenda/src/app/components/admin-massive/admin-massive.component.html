@@ -1,7 +1,11 @@
-<!-- admin-massive.component.html -->
 <div class="admin-massive-container">
-    <button class="download-button" (click)="onDownloadClick()">Descargar Masivo de Agenda Médico</button>
-    <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden>
-    <label  for="fileInput" class="upload-button">Subir Masivo de Turnos Médicos</label>
-  </div>
-  
+  <button class="download-button" (click)="onDownloadClick()">
+    Descargar Masivo de Agenda Médico
+    <br /><br /><i class="pi pi-file-export" style="font-size: 2.5rem"></i>
+  </button>
+  <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden />
+  <label for="fileInput" class="upload-button" style="text-align: center">
+    Subir Masivo de Turnos Médicos
+    <br /><br /><i class="pi pi-file-import" style="font-size: 2.5rem"></i>
+  </label>
+</div>

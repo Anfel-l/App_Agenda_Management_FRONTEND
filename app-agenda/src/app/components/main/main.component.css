@@ -14,10 +14,34 @@
     box-sizing: border-box;
 }
 
+
+
 .content-area {
-    padding-top: 70px; 
-    overflow: auto; 
+    position: relative;
+    height: 95vh;
+    width: 100vw;
 }
+
+.content-area::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/fondo1.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    z-index: -1;
+    width: 100%; 
+
+}
+
+.content-area::before {
+    filter: saturate(150%) brightness(20%) contrast(110%);
+}
+
 
 .bottom-bar {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -39,7 +63,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 90vh;
+
+    
 }
 
 button {
@@ -64,7 +90,7 @@ button {
     -moz-transition: ease-out 0.5s;
     transition: ease-out 0.3s;
 
-    border: #f81111;
+    border: #f8111100;
 }
 
 button:hover {

@@ -1,15 +1,19 @@
 <div class="top-bar">
-    <p><i class="pi pi-backward" style="font-size: 0.9rem"></i> Detalles de turnos y citas médicas <i class="pi pi-forward" style="font-size: 0.9rem"></i></p>
+    <p><i class="pi pi-backward" style="font-size: 0.9rem"></i> DETALLES DE TURNOS Y CITAS MÉDICAS <i class="pi pi-forward" style="font-size: 0.9rem"></i></p>
 </div>
 
 <div class="content-area">
     <form class="form-container" (ngSubmit)="onSubmit()">
         <div class="form-title">Iniciar Sesión</div>
         <div class="form-item">
-            <label class="form-label" for="doctorId">ID del Doctor</label>
+            <label class="form-label" for="doctorId">ID del Doctor <i class="pi pi-book" style="font-size: 0.9rem"></i></label>
             <input type="number" id="doctorId" [(ngModel)]="doctorId" name="doctorId" required>
         </div>
         <button class="form-button" type="submit">Ingresar</button>
     </form>
+</div>
+
+<div class="bottom-bar">
+    <p><i class="pi pi-spin pi-bolt" style="font-size: 0.9rem"></i> Developed by Andrés Felipe Lugo Rodríguez <i class="pi pi-spin pi-bolt" style="font-size: 0.9rem"></i></p>
 </div>
   
