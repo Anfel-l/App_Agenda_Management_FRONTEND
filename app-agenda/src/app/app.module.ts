@@ -3,7 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app.routing.module';
-import { FullCalendarModule } from '@fullcalendar/angular'; // importar el módulo
+import { FullCalendarModule } from '@fullcalendar/angular'; 
+import { TableModule } from 'primeng/table';
+
 
 
 import { AppComponent } from './app.component';
@@ -24,7 +26,6 @@ import { DoctorShiftComponent } from './components/doctor-shift/doctor-shift.com
 import { DoctorSidebarComponent } from './components/doctor-side-bar/doctor-side-bar.component';
 import { MainComponent } from './components/main/main.component';
 import { AdminReviewShiftsComponent } from './components/admin-review-shifts/admin-review-shifts.component';
-
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AdminReviewShiftsComponent } from './components/admin-review-shifts/adm
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    FullCalendarModule
+    FullCalendarModule,
+    TableModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

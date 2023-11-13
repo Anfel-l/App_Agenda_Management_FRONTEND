@@ -1,1 +1,25 @@
-<p>admin-review-shifts works!</p>
+<!-- admin-review-shifts.component.html -->
+<p-table [value]="doctorDetails" [paginator]="true" [rows]="7" [responsiveLayout]="'scroll'">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID Doctor</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Especialidad Médica</th>
+            <th>Centro Médico</th>
+            <th>Inicio Turno</th>
+            <th>Fin Turno</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-doctorDetail>
+        <tr>
+            <td>{{ doctorDetail.doctorId }}</td>
+            <td>{{ doctorDetail.firstName }}</td>
+            <td>{{ doctorDetail.lastName }}</td>
+            <td>{{ doctorDetail.medicalFieldName }}</td>
+            <td>{{ doctorDetail.medicalCenterName }}</td>
+            <td>{{ doctorDetail.startTime | date:'short' }}</td>
+            <td>{{ doctorDetail.endTime | date:'short' }}</td>
+        </tr>
+    </ng-template>
+</p-table>

@@ -5,6 +5,7 @@ import { AgendaDetails } from './models/agendaDetails';
 import { CalendarOptions, EventInput } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-admin-agenda',
@@ -32,8 +33,10 @@ export class AdminAgendaComponent implements OnInit {
         data => {
           this.calendarOptions!.events = this.mapToCalendarEvents(data);
         },
-        error => console.error(error)
+        error => Swal.fire('Error', 'No se ha podido cargar la agenda', 'error')
       );
+    } else {
+      Swal.fire('Error', 'No se ha seleccionado un doctor', 'error');
     }
   }
 
@@ -60,6 +63,8 @@ export class AdminAgendaComponent implements OnInit {
         },
         error => console.error('Error al descargar el archivo', error)
       );
+    } else {
+      Swal.fire('Error', 'No se ha seleccionado un doctor', 'error');
     }
   }
 }

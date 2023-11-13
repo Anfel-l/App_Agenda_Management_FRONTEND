@@ -11,16 +11,47 @@
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 15px;
   }
-  
+  .form-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(241, 241, 241);
+
+    border-radius: 10px;
+    padding: 20px;
+}
+  .form-label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    color: rgb(0, 0, 0);
+}
   .calendar-container {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 15px;
     background-color: rgb(241, 241, 241);
     padding: 20px;
-    width: 600px;
+    width: 750px;
     border-radius: 10px;
     margin-right: 20px;
   }
+
+  input[type="number"] {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 30px;
+
+    font-weight: lighter;
+    font-size: 15px;
+    color: (105, 34, 34);
+    border: 0px;
+    border-radius: 20px;
+
+    border-bottom: #f81111 2px solid;
+}
+
   
   .fc {
     background-color: rgb(241, 241, 241);
@@ -50,6 +81,36 @@
   
   .download-button:hover {
     color: #ffffff;
-    box-shadow: inset 600px 0 0 0 rgb(202, 19, 19);
+    box-shadow: inset 200px 0 0 0 rgb(202, 19, 19);
   }
   
+
+  .form-button{
+    
+    display: block;
+    justify-content: end;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+
+    margin-bottom: 10px;
+ 
+    border-radius: 20px;
+
+    height: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #535253;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+    transition: ease-out 0.3s;
+
+    border: #f81111;
+}
+
+.form-button:hover{
+    color: #ffffff ;
+    box-shadow: inset 150px 0 0 0 rgb(202, 19, 19);
+    
+}

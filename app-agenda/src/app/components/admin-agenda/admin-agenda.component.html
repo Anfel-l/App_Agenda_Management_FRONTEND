@@ -1,13 +1,17 @@
 
 <div class="admin-agenda-container">
+
     <div class="form-container">
-      <label for="doctorId">ID del Doctor:</label>
-      <input type="number" id="doctorId" [(ngModel)]="doctorId">
-      <button (click)="loadShifts()">Cargar Turnos</button>
+      <div class="form-item">
+        <label class="form-label" for="doctorId">ID del Doctor:</label>
+        <input type="number" id="doctorId" [(ngModel)]="doctorId">
+        <button class="form-button" (click)="loadShifts()">Cargar Turnos</button>
+      </div>
     </div>
+
     <div class="calendar-container">
       <full-calendar [options]="calendarOptions"></full-calendar>
     </div>
     <button class="download-button" (click)="downloadCSV()">Descargar Reporte</button>
-  </div>
+</div>
   
