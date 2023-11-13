@@ -1,17 +1,20 @@
 <div class="main-container">
-    <div class="sidebar-container">
-        <div class="doctor-name"><i class="pi pi-briefcase" style="font-size: 2.5rem"></i> <br><br>
-          <i class="pi pi-spin pi-bolt" style="font-size: 1rem"></i> 
-          {{ doctorInfo.firstName  }} {{ doctorInfo.lastName }}
-          <i class="pi pi-spin pi-bolt" style="font-size: 1rem"></i> </div>
-        <div class="details">
-          <div class="item">Especialidad: {{ doctorInfo.medicalFieldName }}</div>
-          <div class="item">Centro Médico: {{ doctorInfo.medicalCenterName }}</div>
-          <div class="item">Horario: {{ doctorInfo.startTime }} - {{ doctorInfo.endTime}}</div>
-        </div>
-        <br/>
+  <div class="sidebar-container">
+    <div class="doctor-name">
+      <i class="pi pi-briefcase" style="font-size: 2.5rem"></i> <br /><br />
+      <i class="pi pi-spin pi-bolt" style="font-size: 1rem"></i>
+      {{ doctorInfo.firstName }} {{ doctorInfo.lastName }}
+      <i class="pi pi-spin pi-bolt" style="font-size: 1rem"></i>
+    </div>
+    <div class="details">
+      <div class="item">Especialidad: {{ doctorInfo.medicalFieldName }}</div>
+      <div class="item">Centro Médico: {{ doctorInfo.medicalCenterName }}</div>
+      <div class="item">
+        Horario: {{ doctorInfo.startTime }} - {{ doctorInfo.endTime }}
       </div>
-      <button class = "doctor-shift" (click)="onReviewShift()">Revisar Turno</button>
-      <button class="logout-button" (click)="logout()">Cerrar Sesión</button>
+    </div>
+    <br />
+  </div>
+  <button class="doctor-shift" (click)="onReviewShift()">Revisar Turno</button>
+  <button class="logout-button" (click)="logout()">Cerrar Sesión</button>
 </div>
-

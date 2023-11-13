@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-admin-agenda',
   templateUrl: './admin-agenda.component.html',
-  styleUrls: ['./admin-agenda.component.css']
+  styleUrls: ['./admin-agenda.component.css'],
 })
 export class AdminAgendaComponent implements OnInit {
   doctorId: number | null = null;
@@ -23,17 +23,18 @@ export class AdminAgendaComponent implements OnInit {
       initialView: 'timeGridDay',
       plugins: [dayGridPlugin, timeGridPlugin],
       nowIndicator: true,
-      events: []
+      events: [],
     };
   }
 
   loadShifts() {
     if (this.doctorId !== null) {
       this.adminAgendaService.getAgendaDetails(this.doctorId).subscribe(
-        data => {
+        (data) => {
           this.calendarOptions!.events = this.mapToCalendarEvents(data);
         },
-        error => Swal.fire('Error', 'No se ha podido cargar la agenda', 'error')
+        (error) =>
+          Swal.fire('Error', 'No se ha podido cargar la agenda', 'error')
       );
     } else {
       Swal.fire('Error', 'No se ha seleccionado un doctor', 'error');
@@ -41,18 +42,18 @@ export class AdminAgendaComponent implements OnInit {
   }
 
   mapToCalendarEvents(agendaDetails: AgendaDetails[]): EventInput[] {
-    return agendaDetails.map(detail => ({
+    return agendaDetails.map((detail) => ({
       title: `Cita con ${detail.userName}`,
       start: new Date(detail.appointmentTime),
       end: new Date(new Date(detail.appointmentTime).getTime() + 30 * 60000),
-      color: 'red'
+      color: 'red',
     }));
   }
 
   downloadCSV() {
     if (this.doctorId !== null) {
       this.adminAgendaService.generateCSV(this.doctorId).subscribe(
-        data => {
+        (data) => {
           const blob = new Blob([data], { type: 'text/csv' });
           const url = window.URL.createObjectURL(blob);
           const a = document.createElement('a');
@@ -61,7 +62,7 @@ export class AdminAgendaComponent implements OnInit {
           a.click();
           window.URL.revokeObjectURL(url);
         },
-        error => console.error('Error al descargar el archivo', error)
+        (error) => console.error('Error al descargar el archivo', error)
       );
     } else {
       Swal.fire('Error', 'No se ha seleccionado un doctor', 'error');

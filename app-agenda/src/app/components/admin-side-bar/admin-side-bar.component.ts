@@ -5,18 +5,16 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-admin-side-bar',
   templateUrl: './admin-side-bar.component.html',
-  styleUrls: ['./admin-side-bar.component.css']
+  styleUrls: ['./admin-side-bar.component.css'],
 })
 export class AdminSideBarComponent {
-
   @Output() reviewAgenda = new EventEmitter<void>();
   @Output() uploadMassive = new EventEmitter<void>();
   @Output() reviewShifts = new EventEmitter<void>();
-  
-  constructor(private router:Router) {}
 
-  ngOnInit() {
-  }
+  constructor(private router: Router) {}
+
+  ngOnInit() {}
 
   onReviewAgenda() {
     this.reviewAgenda.emit();

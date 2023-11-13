@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { DoctorResponse } from './models/doctorResponse'; // Importa el modelo
+import { DoctorResponse } from './models/doctorResponse';
 
 @Injectable({ providedIn: 'root' })
 export class DoctorService {
@@ -9,7 +9,12 @@ export class DoctorService {
 
   constructor(private http: HttpClient) {}
 
-  getAvailableDoctor(appointmentId: number, userId: number): Observable<DoctorResponse> {
-    return this.http.get<DoctorResponse>(`${this.apiUrl}/doctor-available/${appointmentId}/${userId}`);
+  getAvailableDoctor(
+    appointmentId: number,
+    userId: number
+  ): Observable<DoctorResponse> {
+    return this.http.get<DoctorResponse>(
+      `${this.apiUrl}/doctor-available/${appointmentId}/${userId}`
+    );
   }
 }

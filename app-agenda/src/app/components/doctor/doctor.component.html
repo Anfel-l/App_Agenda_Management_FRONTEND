@@ -1,14 +1,14 @@
-<!-- doctor.component.html -->
 <div class="home-container">
   <div class="top-bar">
-      <p><i class="pi pi-backward" style="font-size: 0.9rem"></i> Agenda de Médico <i class="pi pi-forward" style="font-size: 0.9rem"></i></p>
+    <p>
+      <i class="pi pi-backward" style="font-size: 0.9rem"></i> Agenda de Médico
+      <i class="pi pi-forward" style="font-size: 0.9rem"></i>
+    </p>
   </div>
   <app-doctor-side-bar (changeView)="changeView($event)"></app-doctor-side-bar>
   <div class="content-area">
     <ng-container *ngIf="currentView === 'default'">
-      <div class="default">
-        Bienvenido al sistema.
-      </div>
+      <div class="default">Bienvenido al sistema.</div>
     </ng-container>
     <ng-container *ngIf="currentView === 'reviewShift'">
       <app-doctor-shift></app-doctor-shift>

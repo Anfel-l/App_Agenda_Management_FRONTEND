@@ -4,7 +4,7 @@ import { AdminMassiveService } from './admin-massive.service';
 @Component({
   selector: 'app-admin-massive',
   templateUrl: './admin-massive.component.html',
-  styleUrls: ['./admin-massive.component.css']
+  styleUrls: ['./admin-massive.component.css'],
 })
 export class AdminMassiveComponent {
   constructor(private adminMassiveService: AdminMassiveService) {}

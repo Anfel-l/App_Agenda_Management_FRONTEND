@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { AgendaDetails } from './models/agendaDetails';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AdminAgendaService {
   private apiUrl = 'http://localhost:8080/v1/api/detail';
@@ -12,10 +12,15 @@ export class AdminAgendaService {
   constructor(private http: HttpClient) {}
 
   getAgendaDetails(doctorId: number): Observable<AgendaDetails[]> {
-    return this.http.get<AgendaDetails[]>(`${this.apiUrl}/agenda-detail/${doctorId}`);
+    return this.http.get<AgendaDetails[]>(
+      `${this.apiUrl}/agenda-detail/${doctorId}`
+    );
   }
 
   generateCSV(doctorId: number): Observable<Blob> {
-    return this.http.get(`${this.apiUrl}/agenda-detail/generate-csv/${doctorId}`, { responseType: 'blob' });
+    return this.http.get(
+      `${this.apiUrl}/agenda-detail/generate-csv/${doctorId}`,
+      { responseType: 'blob' }
+    );
   }
 }

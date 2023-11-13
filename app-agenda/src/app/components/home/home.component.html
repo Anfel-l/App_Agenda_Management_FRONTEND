@@ -1,7 +1,9 @@
-<!-- home.component.html -->
 <div class="home-container">
   <div class="top-bar">
-    <p><i class="pi pi-backward" style="font-size: 0.9rem"></i> Agendamiento de Citas <i class="pi pi-forward" style="font-size: 0.9rem"></i></p>
+    <p>
+      <i class="pi pi-backward" style="font-size: 0.9rem"></i> Agendamiento de
+      Citas <i class="pi pi-forward" style="font-size: 0.9rem"></i>
+    </p>
   </div>
   <app-sidebar (solicitarCita)="changeView('solicitarCita')"></app-sidebar>
   <div class="content-area">
@@ -16,7 +18,6 @@
         ></app-appointment>
       </div>
     </ng-container>
-
 
     <div class="default" *ngIf="currentView === 'default'">
       Bienvenido al sistema.

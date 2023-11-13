@@ -21,9 +21,9 @@ export class DoctorService {
 
   getAllDoctorDetails(doctors: Doctor[]): Observable<DoctorDetail[]> {
     return forkJoin(
-      doctors.map(doctor => 
+      doctors.map((doctor) =>
         this.getDoctorDetails(doctor.doctorId).pipe(
-          map(detail => ({ ...detail, doctorId: doctor.doctorId })) 
+          map((detail) => ({ ...detail, doctorId: doctor.doctorId }))
         )
       )
     );

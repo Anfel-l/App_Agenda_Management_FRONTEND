@@ -1,8 +1,7 @@
-// detail.service.ts
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Symptom} from './models/symptom';
+import { Symptom } from './models/symptom';
 import { AppointmentType } from './models/appointment-type';
 import { MedicalField } from './models/medical-field';
 

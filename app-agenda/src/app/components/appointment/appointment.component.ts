@@ -4,10 +4,9 @@ import { AppointmentDetailResponse } from '../request-appointment/models/appoint
 @Component({
   selector: 'app-appointment',
   templateUrl: './appointment.component.html',
-  styleUrls: ['./appointment.component.css']
+  styleUrls: ['./appointment.component.css'],
 })
 export class AppointmentComponent {
   @Input() detail?: AppointmentDetailResponse;
-  medicalCenterName?: string; // Campo opcional para el nombre del centro médico
-
+  medicalCenterName?: string;
 }

@@ -1,14 +1,14 @@
-// admin-massive.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import Swal from 'sweetalert2';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AdminMassiveService {
   private apiUrl = 'http://localhost:8080/v1/api/detail';
-  private doctorShiftApiUrl = 'http://localhost:8080/v1/api/doctor/doctor-shift/upload/';
+  private doctorShiftApiUrl =
+    'http://localhost:8080/v1/api/doctor/doctor-shift/upload/';
 
   constructor(private http: HttpClient) {}
 
@@ -20,15 +20,20 @@ export class AdminMassiveService {
     const formData = new FormData();
     formData.append('file', file);
 
-    this.http.post(this.doctorShiftApiUrl, formData, { responseType: 'text' })
+    this.http
+      .post(this.doctorShiftApiUrl, formData, { responseType: 'text' })
       .subscribe({
         next: (response) => {
           Swal.fire('Éxito', 'Archivo subido y procesado con éxito', 'success');
         },
         error: (error: HttpErrorResponse) => {
           const errorMessage = error.error?.message || error.message;
-          Swal.fire('Error', `Error al subir archivo: ${errorMessage}`, 'error');
-        }
+          Swal.fire(
+            'Error',
+            `Error al subir archivo: ${errorMessage}`,
+            'error'
+          );
+        },
       });
   }
 }

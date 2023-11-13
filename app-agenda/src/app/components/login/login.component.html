@@ -1,5 +1,8 @@
 <div class="top-bar">
-  <p><i class="pi pi-backward" style="font-size: 0.9rem"></i> AGENDAMIENTO DE CITAS <i class="pi pi-forward" style="font-size: 0.9rem"></i></p>
+  <p>
+    <i class="pi pi-backward" style="font-size: 0.9rem"></i> AGENDAMIENTO DE
+    CITAS <i class="pi pi-forward" style="font-size: 0.9rem"></i>
+  </p>
 </div>
 
 <div class="content-area">
@@ -17,14 +20,17 @@
         <option
           class="form-option"
           *ngFor="let type of documentTypes"
-          [value]="type.documenTypeId">
+          [value]="type.documenTypeId"
+        >
           {{ type.documentTypeAbbreviation }}
         </option>
       </select>
     </div>
 
     <div class="form-item">
-      <label class="form-label" for="document">Documento <i class="pi pi-id-card" style="font-size: 0.9rem"></i> </label>
+      <label class="form-label" for="document"
+        >Documento <i class="pi pi-id-card" style="font-size: 0.9rem"></i>
+      </label>
       <input
         type="text"
         id="document"
@@ -35,7 +41,9 @@
     </div>
 
     <div class="form-item">
-      <label class="form-label" for="password">Contraseña <i class="pi pi-lock" style="font-size: 0.9rem"></i></label>
+      <label class="form-label" for="password"
+        >Contraseña <i class="pi pi-lock" style="font-size: 0.9rem"></i
+      ></label>
       <input
         type="password"
         id="password"
@@ -50,6 +58,9 @@
 </div>
 
 <div class="bottom-bar">
-  <p><i class="pi pi-spin pi-bolt" style="font-size: 0.6rem"></i> Developed by Andrés Felipe Lugo Rodríguez <i class="pi pi-spin pi-bolt" style="font-size: 0.6rem"></i></p>
+  <p>
+    <i class="pi pi-spin pi-bolt" style="font-size: 0.6rem"></i> Developed by
+    Andrés Felipe Lugo Rodríguez
+    <i class="pi pi-spin pi-bolt" style="font-size: 0.6rem"></i>
+  </p>
 </div>
-

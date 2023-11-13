@@ -6,13 +6,13 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-doctor-side-bar',
   templateUrl: './doctor-side-bar.component.html',
-  styleUrls: ['./doctor-side-bar.component.css']
+  styleUrls: ['./doctor-side-bar.component.css'],
 })
 export class DoctorSidebarComponent implements OnInit {
   doctorInfo: any;
   @Output() changeView = new EventEmitter<string>();
 
-  constructor(private router:Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.doctorInfo = JSON.parse(localStorage.getItem('doctorInfo') || '{}');

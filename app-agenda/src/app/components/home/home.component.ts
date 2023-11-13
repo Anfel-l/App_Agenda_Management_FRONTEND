@@ -5,7 +5,7 @@ import { AppointmentDetailResponse } from '../request-appointment/models/appoint
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   userId: string | null = localStorage.getItem('userId');
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   constructor(private appointmentDataService: AppointmentDataService) {}
 
   ngOnInit() {
-    this.appointmentDataService.currentAppointmentDetail.subscribe(detail => {
+    this.appointmentDataService.currentAppointmentDetail.subscribe((detail) => {
       this.appointmentDetailResponse = detail;
     });
   }
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   changeView(newView: string): void {
     this.currentView = newView;
     this.showAppointmentDetails = false;
-    this.appointmentDetailResponse = null; // Opcional: limpiar el detalle de la cita
+    this.appointmentDetailResponse = null;
   }
 
   onAppointmentScheduled(): void {

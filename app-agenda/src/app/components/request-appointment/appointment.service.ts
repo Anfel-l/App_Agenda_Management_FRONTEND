@@ -6,7 +6,6 @@ import { DetailResponse } from './models/detailResponse';
 import { AppointmentRequest } from './models/appointmentRequest';
 import { DetailRequest } from './models/detailRequest';
 
-
 import { AppointmentFullResponse } from './models/appointmentFullResponse';
 import { AppointmentDetailResponse } from './models/appointmentDetailResponse';
 import { MedicalCenterResponse } from './models/medicalCenterResponse';
@@ -16,19 +15,33 @@ export class AppointmentService {
 
   constructor(private http: HttpClient) {}
 
-  createAppointment(appointmentRequest: AppointmentRequest): Observable<AppointmentResponse> {
-    return this.http.post<AppointmentResponse>(`${this.apiUrl}/apppointment/insert/`, appointmentRequest);
+  createAppointment(
+    appointmentRequest: AppointmentRequest
+  ): Observable<AppointmentResponse> {
+    return this.http.post<AppointmentResponse>(
+      `${this.apiUrl}/apppointment/insert/`,
+      appointmentRequest
+    );
   }
 
   registerDetail(detailRequest: DetailRequest): Observable<DetailResponse> {
-    return this.http.post<DetailResponse>(`${this.apiUrl}/appointment-detail/insert/`, detailRequest);
+    return this.http.post<DetailResponse>(
+      `${this.apiUrl}/appointment-detail/insert/`,
+      detailRequest
+    );
   }
 
-  getAppointmentDetail(detailId: number): Observable<AppointmentDetailResponse> {
-    return this.http.get<AppointmentDetailResponse>(`${this.apiUrl}/detail/appointment-detail/${detailId}`);
+  getAppointmentDetail(
+    detailId: number
+  ): Observable<AppointmentDetailResponse> {
+    return this.http.get<AppointmentDetailResponse>(
+      `${this.apiUrl}/detail/appointment-detail/${detailId}`
+    );
   }
 
   getMedicalCenterDetails(centerId: number): Observable<MedicalCenterResponse> {
-    return this.http.get<MedicalCenterResponse>(`${this.apiUrl}/detail/medical-center/${centerId}`);
+    return this.http.get<MedicalCenterResponse>(
+      `${this.apiUrl}/detail/medical-center/${centerId}`
+    );
   }
 }

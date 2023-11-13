@@ -1,4 +1,3 @@
-// sidebar.component.ts
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { UserService } from './user.service';
 import { User } from './models/user';
@@ -8,7 +7,7 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './side-bar.component.html',
-  styleUrls: ['./side-bar.component.css']
+  styleUrls: ['./side-bar.component.css'],
 })
 export class SidebarComponent implements OnInit {
   user: User = {
@@ -18,16 +17,16 @@ export class SidebarComponent implements OnInit {
     document: '',
     documentType: '',
     contractType: '',
-    locationName: ''
+    locationName: '',
   };
   userId: number = parseInt(localStorage.getItem('userId') || '0', 10);
 
-  constructor(private userService: UserService, private router:Router) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit() {
     this.userService.getUserDetails(this.userId).subscribe(
-      data => this.user = data,
-      error => console.error(error)
+      (data) => (this.user = data),
+      (error) => console.error(error)
     );
   }
 
