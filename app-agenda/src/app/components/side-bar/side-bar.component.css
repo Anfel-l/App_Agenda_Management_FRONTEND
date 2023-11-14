@@ -89,7 +89,7 @@
   width: 100%;
   height: auto;
 
-  margin-top: calc(100vh - 480px);
+  margin-top: calc(100vh - 460px);
 
   cursor: pointer;
   box-shadow: inset 0 0 0 0 #535253;
